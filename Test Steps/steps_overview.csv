@@ -1,5 +1,5 @@
 Flow ID,Name,Description,Test Steps,Flow Priority
-1,Verify Adding Sauce Labs Backpack to Cart,Navigate to the home page and login to access the inventory. Add the Sauce Labs Backpack to the cart and verify the cart page.,"step 1: Navigate to https://www.saucedemo.com/
+1,Verify Adding Item to Cart from Inventory,Navigate to the inventory page and add an item to the cart. Verify the contents of the cart.,"step 1: Navigate to https://www.saucedemo.com/
 step 2: Login -> Navigate to page 'inventory.html'
 step 3: Click on button 'add-to-cart-sauce-labs-backpack'
 step 4: Click on select
