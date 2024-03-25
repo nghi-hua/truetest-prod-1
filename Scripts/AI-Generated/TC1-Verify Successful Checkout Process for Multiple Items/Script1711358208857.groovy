@@ -1,8 +1,8 @@
 import internal.GlobalVariable as GlobalVariable
-import com.kms.katalon.core.model.FailureHandling
 import katalon.truetest.TrueTestScripts
-import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
+import com.kms.katalon.core.model.FailureHandling
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
+import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 
 'Initialize test session: Open browser and set view port'
 
@@ -32,35 +32,35 @@ WebUI.takeScreenshot()
 
 TrueTestScripts.login()
 
-"Step 4: Click on link 'item 4 title link' -> Navigate to page 'inventory-item.html'"
+"Step 4: Click on button 'add-to-cart-sauce-labs-backpack'"
 
 WebUI.takeScreenshot()
 
-WebUI.verifyElementPresent(findTestObject('AI-Generated/Page_inventory_html/hyperlink_item_4_title_link'), 20, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.verifyElementPresent(findTestObject('AI-Generated/Page_inventory_html/button_add_to_cart_sauce_labs_backpack'), 20, FailureHandling.CONTINUE_ON_FAILURE)
 
 WebUI.verifyMatch(WebUI.getUrl(), GlobalVariable.application_domain + '/inventory.html?/?(?:#.*)?(?:\\?.*)?$', true)
 
-WebUI.enhancedClick(findTestObject('AI-Generated/Page_inventory_html/hyperlink_item_4_title_link'))
+WebUI.enhancedClick(findTestObject('AI-Generated/Page_inventory_html/button_add_to_cart_sauce_labs_backpack'))
 
-"Step 5: Click on button 'add-to-cart-sauce-labs-backpack'"
-
-WebUI.takeScreenshot()
-
-WebUI.verifyElementPresent(findTestObject('AI-Generated/Page_inventory_item_html/button_add_to_cart_sauce_labs_backpack'), 20, FailureHandling.CONTINUE_ON_FAILURE)
-
-WebUI.verifyMatch(WebUI.getUrl(), GlobalVariable.application_domain + '/inventory-item.html?/?(?:#.*)?(?:\\?.*)?$', true)
-
-WebUI.enhancedClick(findTestObject('AI-Generated/Page_inventory_item_html/button_add_to_cart_sauce_labs_backpack'))
-
-"Step 6: Click on link '1' -> Navigate to page 'cart.html'"
+"Step 5: Click on button 'add-to-cart-sauce-labs-bike-light'"
 
 WebUI.takeScreenshot()
 
-WebUI.verifyElementPresent(findTestObject('AI-Generated/Page_inventory_item_html/hyperlink_1'), 20, FailureHandling.CONTINUE_ON_FAILURE)
+WebUI.verifyElementPresent(findTestObject('AI-Generated/Page_inventory_html/button_add_to_cart_sauce_labs_bike_light'), 20, FailureHandling.CONTINUE_ON_FAILURE)
 
-WebUI.verifyMatch(WebUI.getUrl(), GlobalVariable.application_domain + '/inventory-item.html?/?(?:#.*)?(?:\\?.*)?$', true)
+WebUI.verifyMatch(WebUI.getUrl(), GlobalVariable.application_domain + '/inventory.html?/?(?:#.*)?(?:\\?.*)?$', true)
 
-WebUI.enhancedClick(findTestObject('AI-Generated/Page_inventory_item_html/hyperlink_1'))
+WebUI.enhancedClick(findTestObject('AI-Generated/Page_inventory_html/button_add_to_cart_sauce_labs_bike_light'))
+
+"Step 6: Click on link '2' -> Navigate to page 'cart.html'"
+
+WebUI.takeScreenshot()
+
+WebUI.verifyElementPresent(findTestObject('AI-Generated/Page_inventory_html/hyperlink_2'), 20, FailureHandling.CONTINUE_ON_FAILURE)
+
+WebUI.verifyMatch(WebUI.getUrl(), GlobalVariable.application_domain + '/inventory.html?/?(?:#.*)?(?:\\?.*)?$', true)
+
+WebUI.enhancedClick(findTestObject('AI-Generated/Page_inventory_html/hyperlink_2'))
 
 "Step 7: Click on button 'checkout' -> Navigate to page 'checkout-step-one.html'"
 
@@ -142,19 +142,9 @@ WebUI.verifyMatch(WebUI.getUrl(), GlobalVariable.application_domain + '/checkout
 
 WebUI.enhancedClick(findTestObject('AI-Generated/Page_checkout_step_one_html/input_continue'))
 
-"Step 15: Click on button 'finish' -> Navigate to page 'checkout-complete.html'"
+"Step 15: Take full page screenshot as checkpoint"
 
-WebUI.takeScreenshot()
-
-WebUI.verifyElementPresent(findTestObject('AI-Generated/Page_checkout_step_two_html/button_finish'), 20, FailureHandling.CONTINUE_ON_FAILURE)
-
-WebUI.verifyMatch(WebUI.getUrl(), GlobalVariable.application_domain + '/checkout-step-two.html?/?(?:#.*)?(?:\\?.*)?$', true)
-
-WebUI.enhancedClick(findTestObject('AI-Generated/Page_checkout_step_two_html/button_finish'))
-
-"Step 16: Take full page screenshot as checkpoint"
-
-WebUI.takeFullPageScreenshotAsCheckpoint('TC1-Verify Successful Checkout Process for Sauce Labs Backpack_visual_checkpoint')
+WebUI.takeFullPageScreenshotAsCheckpoint('TC1-Verify Successful Checkout Process for Multiple Items_visual_checkpoint')
 
 'Terminate test session: Close browser'
 
